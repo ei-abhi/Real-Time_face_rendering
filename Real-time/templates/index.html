@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title id='tittle'>Real-Time Face Recognition</title>
+  <style>
+    body{
+      margin:10px;
+      padding:20px;
+      background-color:#ebf6f5;
+      border:1px dotted;
+      border-color:red;
+
+    }
+    h1{
+      background-color:#5cbdb9;
+      text-align:center;
+      padding:15px;
+      margin:0px 90px 40px 90px;
+      border-radius:0px 40px 0px 40px;
+    }
+    #video_feed{
+       margin-left:400px;
+       margin-right:400px;
+       border-radius:5px;
+       height:400px;
+       width:auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 >Real-Time Face Recognition</h1>
+  <div>
+    <h2>what is real-time</h2>
+  </div>    
+  <img id="video_feed" src="{{ url_for('video_feed') }}">
+</body>
+</html>

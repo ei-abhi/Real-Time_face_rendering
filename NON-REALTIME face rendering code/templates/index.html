@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Face Detection in Video</title>
+    <link rel="stylesheet" href="{{ url_for('static',    filename='template.css') }}">
+    
+    
+</head>
+
+<body>
+    <h1>Face Detection in Video</h1>
+    <div class="upload-form">
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label class="bb" for="videofile">Upload Video:</label>
+            <input type="file" name="videofile" id="videofile" accept=".mp4">
+            <button class="bc" type="submit">Submit</button>
+        </form>
+    </div>
+    
+    {% if video_path %}
+    <h2>Processed Video with Detected Faces</h2>
+    <img id="video_feed" src="{{ url_for('video_feed', video_path=video_path) }}">
+    {% endif %}
+    
+</body>
+
+</html>
